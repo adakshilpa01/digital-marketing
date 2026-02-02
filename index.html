@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SA Digital Marketing Agency</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+html{scroll-behavior:smooth;}
+body{background:#fff;color:#222;}
+
+/* NAVBAR */
+nav{
+position:fixed;top:0;width:100%;
+background:#fff;padding:14px 8%;
+display:flex;justify-content:space-between;align-items:center;
+box-shadow:0 5px 25px rgba(0,0,0,0.06);
+z-index:999;
+}
+.logo{height:65px;transition:0.3s;}
+.logo:hover{transform:scale(1.05);}
+nav a{margin-left:22px;text-decoration:none;color:#222;font-weight:500;}
+nav a:hover{color:#f4b400;}
+
+/* BUTTON */
+.btn{
+display:inline-block;padding:14px 32px;
+background:#f4b400;color:#000;
+border-radius:30px;text-decoration:none;
+font-weight:600;transition:0.3s;
+}
+.btn:hover{background:#000;color:#fff;transform:translateY(-3px);}
+
+section{padding:100px 8%;}
+
+/* HERO */
+#home{
+padding:150px 8% 110px;
+display:grid;grid-template-columns:1fr 1fr;
+gap:40px;align-items:center;
+background:linear-gradient(to right,#fff,#fff6d1);
+}
+#home h1{font-size:48px;line-height:1.2;}
+#home span{color:#f4b400;}
+#home p{margin:22px 0;color:#555;}
+
+.hero-box{
+background:#000;color:#fff;
+padding:45px;border-radius:22px;
+animation:float 3s ease-in-out infinite;
+}
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0);}
+}
+
+/* TITLES */
+.title{text-align:center;margin-bottom:60px;}
+.title h2{font-size:36px;}
+.title span{color:#f4b400;}
+
+/* CARDS */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+.card{
+background:#fff;padding:35px;border-radius:22px;
+box-shadow:0 12px 40px rgba(0,0,0,0.08);
+transition:0.4s;
+}
+.card:hover{
+background:#000;color:#fff;
+transform:translateY(-10px);
+}
+.card:hover h3{color:#f4b400;}
+
+/* BLACK SECTION */
+.black{background:#000;color:#fff;}
+.black .card{background:#111;}
+.black .card:hover{background:#f4b400;color:#000;}
+
+/* STATS */
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;text-align:center;
+}
+.stat{
+background:#fff8e1;padding:35px;border-radius:22px;
+}
+.stat h3{font-size:36px;color:#f4b400;}
+
+/* PROCESS */
+.process{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+.step{
+padding:30px;background:#fff8e1;
+border-left:6px solid #f4b400;
+transition:0.3s;
+}
+.step:hover{background:#f4b400;color:#000;}
+
+/* FAQ */
+.faq{max-width:900px;margin:auto;}
+.faq div{
+background:#fff8e1;
+padding:25px;border-radius:18px;
+margin-bottom:20px;
+}
+
+/* CTA */
+#contact{
+background:linear-gradient(to right,#f4b400,#ffeb3b);
+text-align:center;
+}
+#contact h2{font-size:40px;margin-bottom:15px;}
+#contact p{margin-bottom:25px;}
+
+/* CONTACT FORM */
+#cont{background:#fff8e1;text-align:center;}
+form{max-width:600px;margin:auto;}
+input,textarea{
+width:100%;padding:14px;margin:12px 0;
+border:1px solid #ccc;border-radius:8px;
+}
+
+/* FOOTER */
+footer{
+background:#000;color:#ccc;
+text-align:center;padding:35px;
+}
+footer img{height:50px;margin-bottom:10px;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+#home{grid-template-columns:1fr;text-align:center;}
+}
+/* FOOTER */
+footer{
+background:#000;color:#ccc;
+text-align:center;padding:40px;
+}
+footer h3{color:#f4b400;margin-bottom:10px;}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float{
+position:fixed;
+bottom:25px;right:25px;
+background:#25D366;
+color:#fff;
+padding:14px 18px;
+border-radius:50%;
+font-size:26px;
+text-decoration:none;
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
+z-index:999;
+}
+
+/* SCROLL ANIMATION */
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:0.8s;
+}
+.reveal.active{
+opacity:1;
+transform:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<img src="logo (2).png" class="logo" alt="SA Marketing Logo">
+<div>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#process">Process</a>
+<a href="#contact" class="btn">Free Consultation</a>
+<a href="#cont">Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+<div>
+<h1>Results-Driven <span>Digital Marketing Agency</span></h1>
+<p>We help businesses generate leads, sales and long-term growth through proven digital marketing strategies.</p>
+<a href="#contact" class="btn">Get Free Strategy Call</a>
+</div>
+<div class="hero-box">
+<h3>✔ Trusted Growth Partner</h3>
+<p>SEO • Paid Ads • Website Design<br>Real ROI. Real Results.</p>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="title"><h2>Why <span>Choose Us</span></h2></div>
+<div class="grid">
+<div class="card"><h3>Custom Strategy</h3><p>Marketing plans designed specifically for your business goals.</p></div>
+<div class="card"><h3>Transparent Reporting</h3><p>Clear data, honest results and regular performance updates.</p></div>
+<div class="card"><h3>Expert Team</h3><p>Certified marketers with hands-on experience.</p></div>
+</div>
+</section>
+
+<!-- STATS -->
+<section>
+<div class="title"><h2>Our <span>Impact</span></h2></div>
+<div class="stats">
+<div class="stat"><h3>300+</h3><p>Projects Completed</p></div>
+<div class="stat"><h3>5X</h3><p>Average ROI</p></div>
+<div class="stat"><h3>96%</h3><p>Client Retention</p></div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="black">
+<div class="title"><h2>Our <span>Services</span></h2></div>
+<div class="grid">
+<div class="card"><h3>SEO Optimization</h3><p>Rank higher and attract quality organic traffic.</p></div>
+<div class="card"><h3>Google & Meta Ads</h3><p>High-converting paid advertising campaigns.</p></div>
+<div class="card"><h3>Website Design</h3><p>Premium, fast & conversion-focused websites.</p></div>
+<div class="card"><h3>Social Media Marketing</h3><p>Build brand authority and engagement.</p></div>
+</div>
+</section>
+
+<!-- INDUSTRIES -->
+<section>
+<div class="title"><h2>Industries <span>We Serve</span></h2></div>
+<div class="grid">
+<div class="card">Real Estate</div>
+<div class="card">E-Commerce</div>
+<div class="card">Healthcare</div>
+<div class="card">Restaurants</div>
+<div class="card">Local Businesses</div>
+<div class="card">Startups</div>
+<div class="card">Travel</div>
+</div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+<div class="title"><h2>Our <span>Process</span></h2></div>
+<div class="process">
+<div class="step">Market Research</div>
+<div class="step">Strategy Planning</div>
+<div class="step">Campaign Execution</div>
+<div class="step">Optimization & Scaling</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section>
+<div class="title"><h2>FAQs</h2></div>
+<div class="faq">
+<div><strong>How soon will I see results?</strong><p>Paid ads show quick results, SEO takes 3–6 months.</p></div>
+<div><strong>Do you provide custom plans?</strong><p>Yes, every business gets a tailored strategy.</p></div>
+<div><strong>Is there any long-term contract?</strong><p>No, we believe in performance, not lock-ins.</p></div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Let’s Grow Your Business</h2>
+<p>Book a free consultation with our marketing experts today.</p>
+<a href="https://wa.me/+16474498133" class="btn">WhatsApp Us</a>
+<a href="tel:+919217794972" class="btn">Call Now</a>
+</section>
+
+<!-- CONTACT FORM-->
+<section id="cont" class="reveal">
+<h1>Contact Us</h1>
+
+<form action="https://formsubmit.co/YOUR_EMAIL@gmail.com" method="POST">
+<input type="hidden" name="_captcha" value="false">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Message" required></textarea>
+<button class="btn">Send Message</button>
+</form>
+</section>
+
+<footer>
+<p>
+<b>Office Address:</b><br>
+2nd Floor, Business Hub,<br>
+Toronto, Canada
+</p>
+<p>© 2026 Digital Marketing Agency. All Rights Reserved.</p>
+</footer>
+
+<a href="https://wa.me/16474498133" class="whatsapp-float">💬</a>
+
+<script>
+const reveals=document.querySelectorAll(".reveal");
+window.addEventListener("scroll",()=>{
+reveals.forEach(r=>{
+if(r.getBoundingClientRect().top < window.innerHeight-100){
+r.classList.add("active");
+}
+});
+});
+</script>
+
+
+</body>
+</html>
