@@ -284,16 +284,13 @@ transform:none;
 <!-- CONTACT FORM-->
 <section id="cont" class="reveal">
 <h1>Contact Us</h1>
-
-<form action="https://formsubmit.co/YOUR_EMAIL@gmail.com" method="POST">
-<input type="hidden" name="_captcha" value="false">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" placeholder="Message" required></textarea>
-<button class="btn">Send Message</button>
+<form id="whatsappForm">
+  <input type="text" id="name" placeholder="Your Name" required>
+  <input type="email" id="email" placeholder="Your Email" required>
+  <textarea id="message" placeholder="Your Message" required></textarea>
+  <button type="submit" class="btn">Send on WhatsApp</button>
 </form>
 </section>
-
 <footer>
 <p>
 <b>Office Address:</b><br>
@@ -313,9 +310,29 @@ if(r.getBoundingClientRect().top < window.innerHeight-100){
 r.classList.add("active");
 }
 });
+</script>
+<script>
+document.getElementById("whatsappForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+
+  var phoneNumber = "16474498133"; // ← apna WhatsApp number (country code ke sath)
+
+  var whatsappMessage =
+    "Hello SA Marketing,%0A%0A" +
+    "Name: " + name + "%0A" +
+    "Email: " + email + "%0A" +
+    "Message: " + message;
+
+  var whatsappURL =
+    "https://wa.me/" + phoneNumber + "?text=" + whatsappMessage;
+
+  window.open(whatsappURL, "_blank");
 });
 </script>
-
 
 </body>
 </html>
