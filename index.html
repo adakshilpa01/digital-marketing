@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SA Digital Marketing Agency</title>
+<title>Digital Marketing Agency</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -126,12 +126,9 @@ text-align:center;
 #contact p{margin-bottom:25px;}
 
 /* CONTACT FORM */
-#cont{background:#fff8e1;text-align:center;}
-form{max-width:600px;margin:auto;}
-input,textarea{
-width:100%;padding:14px;margin:12px 0;
-border:1px solid #ccc;border-radius:8px;
-}
+
+.form{text-align:center}
+
 
 /* FOOTER */
 footer{
@@ -149,7 +146,6 @@ footer{
 background:#000;color:#ccc;
 text-align:center;padding:40px;
 }
-footer h3{color:#f4b400;margin-bottom:10px;}
 
 /* WHATSAPP FLOAT */
 .whatsapp-float{
@@ -183,14 +179,14 @@ transform:none;
 
 <!-- NAVBAR -->
 <nav>
-<img src="logo (2).png" class="logo" alt="SA Marketing Logo">
+<img src="logo (2).png" class="logo">
 <div>
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#process">Process</a>
 <a href="#contact" class="btn">Free Consultation</a>
-<a href="#cont">Contact</a>
+<a href="#form">Contact</a>
 </div>
 </nav>
 
@@ -281,15 +277,21 @@ transform:none;
 <a href="tel:+919217794972" class="btn">Call Now</a>
 </section>
 
-<!-- CONTACT FORM-->
-<section id="cont" class="reveal">
-<h1>Contact Us</h1>
-<form id="whatsappForm">
-  <input type="text" id="name" placeholder="Your Name" required>
-  <input type="email" id="email" placeholder="Your Email" required>
-  <textarea id="message" placeholder="Your Message" required></textarea>
-  <button type="submit" class="btn">Send on WhatsApp</button>
-</form>
+<section id="form" class="contact">
+  <div class="title"><h2>Contact</h2></div>
+   <h3 style="margin-top:30px;"><center>Query Form</center></h3>
+  <form onsubmit="sendMessage(); return false;" style="max-width:400px;margin:20px auto;text-align:left;">
+    <label>Name</label><br>
+    <input id="name" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
+    <label>Email</label><br>
+    <input id="Email" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
+    <label>Message</label><br>
+    <input id="qty" required style="width:100%;padding:8px;margin-bottom:15px;"><br>
+    <button type="submit" class="btn"><center>Submit</center></button>
+  </form>
+</section>
+
+
 </section>
 <footer>
 <p>
@@ -311,27 +313,15 @@ r.classList.add("active");
 }
 });
 </script>
+
 <script>
-document.getElementById("whatsappForm").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var message = document.getElementById("message").value;
-
-  var phoneNumber = "16474498133"; // ← apna WhatsApp number (country code ke sath)
-
-  var whatsappMessage =
-    "Hello SA Marketing,%0A%0A" +
-    "Name: " + name + "%0A" +
-    "Email: " + email + "%0A" +
-    "Message: " + message;
-
-  var whatsappURL =
-    "https://wa.me/" + phoneNumber + "?text=" + whatsappMessage;
-
-  window.open(whatsappURL, "_blank");
-});
+function sendMessage(){
+  var name=document.getElementById('name').value;
+  var item=document.getElementById('Email').value;
+  var qty=document.getElementById('Message').value;
+  var msg=`Hello, my name is ${name}. My Email is this ${item} (Qty: ${qty})`;
+  window.open(`https://wa.me/+16474498133?text=${encodeURIComponent(msg)}`,'_blank');
+}
 </script>
 
 </body>
